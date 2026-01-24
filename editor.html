@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Figma Lite Editor</title>
+
+  <!-- Remix Icon CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="logo">Canvix</div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="editor">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar left">
+      <h4>LAYERS</h4>
+      <div id="layers"></div>
+    </aside>
+
+    <!-- CANVAS -->
+    <main class="canvas-wrap">
+      <div id="canvas"></div>
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="sidebar right">
+      <h4>PROPERTIES</h4>
+
+      <label>X <input id="prop-x" type="number"></label>
+      <label>Y <input id="prop-y" type="number"></label>
+      <label>W <input id="prop-w" type="number"></label>
+      <label>H <input id="prop-h" type="number"></label>
+
+      <label>Fill <input id="prop-color" type="color"></label>
+      <label>Text <input id="prop-text" type="text"></label>
+    </aside>
+
+  </div>
+
+  <!-- CENTER BOTTOM TOOLBAR -->
+  <div class="floating-toolbar">
+    <button class="tool" id="go-home" title="Go to Home">
+      <i class="ri-home-4-line"></i>
+    </button>
+
+    <button class="tool active" title="Select">
+      <i class="ri-cursor-line"></i>
+    </button>
+
+    <button class="tool" id="add-rect" title="Rectangle">
+      <i class="ri-checkbox-blank-line"></i>
+    </button>
+
+    <button class="tool" id="add-text" title="Text">
+      <i class="ri-text"></i>
+    </button>
+
+    <button class="tool" id="delete" title="Delete">
+      <i class="ri-delete-bin-6-line"></i>
+    </button>
+    <button class="tool" id="add-image" title="Image">
+      <i class="ri-image-line"></i>
+    </button>
+
+<input type="file" id="image-input" accept="image/*" hidden>
+
+  </div>
+
+  <script src="editor.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #2C2C2C;
+  color: #e5e7eb;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.top-bar {
+  height: 44px;
+  background: #2C2C2C;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid black;
+  gap: 10px;
+}
+
+.back-home {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.back-home:hover {
+  background: #1f2937;
+  color: #fff;
+}
+
+
+.logo {
+  font-weight: 800;
+  color: #0186c8;
+  font-size: 25px;
+}
+
+
+.editor {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  height: calc(100vh - 44px);
+}
+
+.sidebar {
+  background: #2C2C2C;
+  padding: 14px;
+  border-right: 1px solid black;
+}
+
+.sidebar.right {
+  border-right: none;
+  border-left: 1px solid #1f2937;
+}
+
+.sidebar h4 {
+  font-size: 17px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.sidebar label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sidebar input {
+  width: 90px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #1f2937;
+  color: black;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+.canvas-wrap {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(234, 232, 232, 0.551) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234, 232, 232, 0.551) 1px, transparent 1px);
+  background-size: 20px 20px;
+  position: relative;
+  border-radius: 12px;
+}
+
+.element {
+  position: absolute;
+  cursor: move;
+}
+
+.element.selected {
+  outline: 2px solid #0e57ceee;
+}
+
+.floating-toolbar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 22, 30, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 10px;
+  border-radius: 14px;
+  display: flex;
+  gap: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.tool {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tool:hover {
+  background: #1f2937;
+  color: #fff;
+}
+
+.tool.active {
+  background: transparent;
+  color: #9ca3af;
+}
+
+.tool.active:hover{
+  background: #1f2937;
+  color: white;
+}
+
+.element img {
+  user-select: none;
+  pointer-events: none;
+}
+
+.element {
+  max-width: 100%;
+}
+
